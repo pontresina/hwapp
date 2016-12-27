@@ -31,22 +31,35 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Test");
+            bool IsConsole = false;
 
-                        /*.UseServer("Microsoft.AspNetCore.Server.Kestrel")
-                        .UseApplicationBasePath(Directory.GetCurrentDirectory())
-                        .UseDefaultConfiguration(args)
-                        .UseIISPlatformHandlerUrl()
-                        .UseUrls("http://localhost:5050")*/
+            if(args.Length != 0)
+            {
+                if(args[0] == "--console")
+                {
+                    Console.Clear();
+                    Console.WriteLine("Console true");
+                    IsConsole=true;
+                    Console.ReadLine();
+                }
+            }
 
-            var host = new WebHostBuilder()
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseKestrel()
-                .UseStartup<Startup>()
-                .UseUrls("http://localhsot:5001")
-                .Build();
+            if(IsConsole == false){
+                    /*.UseServer("Microsoft.AspNetCore.Server.Kestrel")
+                    .UseApplicationBasePath(Directory.GetCurrentDirectory())
+                    .UseDefaultConfiguration(args)
+                    .UseIISPlatformHandlerUrl()
+                    .UseUrls("http://localhost:5050")*/
 
-            host.Run();
+                var host = new WebHostBuilder()
+                    .UseContentRoot(Directory.GetCurrentDirectory())
+                    .UseKestrel()
+                    .UseStartup<Startup>()
+                    .UseUrls("http://localhost:5001")
+                    .Build();
+
+                host.Run();
+            }
         }
     }
 

@@ -1,5 +1,5 @@
---temp-output:c:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\
---out:c:\_Store\Repos2\hwapp\bin\Debug\netcoreapp1.0\hwapp.dll
+--temp-output:C:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\
+--out:C:\_Store\Repos2\hwapp\bin\Debug\netcoreapp1.0\hwapp.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -162,5 +162,5 @@
 --reference:C:\Users\Frank\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Frank\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Frank\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"c:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\hwappdotnet-compile.deps.json",hwapp.deps.json
-c:\_Store\Repos2\hwapp\Program.cs
+--resource:"C:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\hwappdotnet-compile.deps.json",hwapp.deps.json
+C:\_Store\Repos2\hwapp\Program.cs
