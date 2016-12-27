@@ -7,7 +7,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceRoot}\\bin\\Debug\\netcoreapp1.0\\hwapp.dll",
-            "args": ["--consoleX"],
+            "args": ["--console"],
             "cwd": "${workspaceRoot}",
             "externalConsole": true,
             "stopAtEntry": false,

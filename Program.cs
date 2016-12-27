@@ -1,4 +1,5 @@
 ﻿// 23.12.2016 fwa created
+// 27.12.2016 fwa Test git clone
 // https://weblog.west-wind.com/posts/2016/Jun/29/First-Steps-Exploring-NET-Core-and-ASPNET-Core#Wherearewe?
 
 // vs code
