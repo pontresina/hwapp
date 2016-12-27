@@ -6,6 +6,9 @@
 // C:\Users\[username]\.vscode\extensions
 // C:\Users\[username]\AppData\Roaming\Code\User
 
+// Debugging 
+// https://code.visualstudio.com/Docs/editor/debugging
+
 // dotnet
 // 1.0.0-preview2-003121
 // 1.0.0-preview2-003131
