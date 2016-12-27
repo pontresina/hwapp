@@ -12,6 +12,8 @@
 
 // "C:\Program Files\dotnet\dotnet.exe" exec --additionalprobingpath C:\Users\Frank\.nuget\packages C:\_Store\Repos2\hwapp\bin\Debug\netcoreapp1.0\hwapp.dll
 
+// http://sqlitebrowser.org/
+
 using System;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
@@ -28,10 +30,17 @@ namespace ConsoleApplication
         {
             Console.WriteLine("Test");
 
+                        /*.UseServer("Microsoft.AspNetCore.Server.Kestrel")
+                        .UseApplicationBasePath(Directory.GetCurrentDirectory())
+                        .UseDefaultConfiguration(args)
+                        .UseIISPlatformHandlerUrl()
+                        .UseUrls("http://localhost:5050")*/
+
             var host = new WebHostBuilder()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseKestrel()
                 .UseStartup<Startup>()
+                .UseUrls("http://localhsot:5001")
                 .Build();
 
             host.Run();
