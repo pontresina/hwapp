@@ -1,4 +1,12 @@
-﻿// https://weblog.west-wind.com/posts/2016/Jun/29/First-Steps-Exploring-NET-Core-and-ASPNET-Core#Wherearewe?
+﻿// 23.12.2016 fwa created
+// https://weblog.west-wind.com/posts/2016/Jun/29/First-Steps-Exploring-NET-Core-and-ASPNET-Core#Wherearewe?
+
+// dotnet
+// 1.0.0-preview2-003121
+// 1.0.0-preview2-003131
+
+// "C:\Program Files\dotnet\dotnet.exe" exec --additionalprobingpath C:\Users\Frank\.nuget\packages C:\_Store\Repos2\hwapp\bin\Debug\netcoreapp1.0\hwapp.dll
+
 using System;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
