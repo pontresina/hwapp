@@ -1,6 +1,11 @@
 ﻿// 23.12.2016 fwa created
 // https://weblog.west-wind.com/posts/2016/Jun/29/First-Steps-Exploring-NET-Core-and-ASPNET-Core#Wherearewe?
 
+// vs code
+// %USERPROFILE%
+// C:\Users\[username]\.vscode\extensions
+// C:\Users\[username]\AppData\Roaming\Code\User
+
 // dotnet
 // 1.0.0-preview2-003121
 // 1.0.0-preview2-003131
