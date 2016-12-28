@@ -16,6 +16,12 @@
 
 // "C:\Program Files\dotnet\dotnet.exe" exec --additionalprobingpath C:\Users\Frank\.nuget\packages C:\_Store\Repos2\hwapp\bin\Debug\netcoreapp1.0\hwapp.dll
 
+// git
+// git config --global http.proxy http://user:pwd@d100apap-by07.proxy.intern:3128
+// git config --global http.proxy http://proxyuser:proxypwd@proxy.server.com:8080
+// git config --global --unset http.proxy
+// git config --global --get http.proxy
+
 // http://sqlitebrowser.org/
 
 using System;
