@@ -11,8 +11,11 @@
 // https://code.visualstudio.com/Docs/editor/debugging
 
 // dotnet
+// .NET-Dokumentation
+// https://docs.microsoft.com/de-de/dotnet/
 // 1.0.0-preview2-003121
 // 1.0.0-preview2-003131
+// 1.0.0-preview3-004056
 // dotnet publish -o site
 
 // "C:\Program Files\dotnet\dotnet.exe" exec --additionalprobingpath C:\Users\Frank\.nuget\packages C:\_Store\Repos2\hwapp\bin\Debug\netcoreapp1.0\hwapp.dll
@@ -31,6 +34,9 @@
 // Migrating From ASP.NET MVC to ASP.NET Core MVC
 // http://aspnetcore.readthedocs.io/en/stable/migration/mvc.html
 // https://www.tutorialspoint.com/asp.net_core/asp.net_core_quick_guide.htm
+
+// MSBUILD : error MSB4025: The project file could not be loaded. Data at the root level is invalid. Line 1, position 1.
+// https://github.com/aspnet/JavaScriptServices/issues/495
 
 using System;
 using System.IO;
