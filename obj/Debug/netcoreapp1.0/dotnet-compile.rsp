@@ -164,3 +164,4 @@
 --reference:C:\Users\a0440503\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
 --resource:"f:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\hwappdotnet-compile.deps.json",hwapp.deps.json
 f:\_Store\Repos2\hwapp\Program.cs
+f:\_Store\Repos2\hwapp\Controllers\HomeController.cs

@@ -13,6 +13,7 @@
 // dotnet
 // 1.0.0-preview2-003121
 // 1.0.0-preview2-003131
+// dotnet publish -o site
 
 // "C:\Program Files\dotnet\dotnet.exe" exec --additionalprobingpath C:\Users\Frank\.nuget\packages C:\_Store\Repos2\hwapp\bin\Debug\netcoreapp1.0\hwapp.dll
 
@@ -23,6 +24,13 @@
 // git config --global --get http.proxy
 
 // http://sqlitebrowser.org/
+
+// Layout
+// https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout#viewimports
+// http://asp.net-hacker.rocks/2016/02/18/extending-razor-views.html
+// Migrating From ASP.NET MVC to ASP.NET Core MVC
+// http://aspnetcore.readthedocs.io/en/stable/migration/mvc.html
+// https://www.tutorialspoint.com/asp.net_core/asp.net_core_quick_guide.htm
 
 using System;
 using System.IO;
@@ -61,6 +69,7 @@ namespace ConsoleApplication
                 var host = new WebHostBuilder()
                     .UseContentRoot(Directory.GetCurrentDirectory())
                     .UseKestrel()
+                    //.UseIISIntegration()
                     .UseStartup<Startup>()
                     .UseUrls("http://localhost:5001")
                     .Build();
@@ -88,8 +97,13 @@ namespace ConsoleApplication
                 //app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseMvc();
-
+            //app.UseMvc();
+            app.UseMvc(routes =>
+                        {
+                            routes.MapRoute(
+                                name: "default",
+                                template: "{controller=Home}/{action=Index}/{id?}");
+                        });
             //app.Use(async (context, next) =>
             //{
             //    await context.Response.WriteAsync("Pre Processing");
@@ -105,6 +119,7 @@ namespace ConsoleApplication
                     DateTime.Now.ToString("hh:mm:ss tt"));
 
             });
+
         }
     }
 
