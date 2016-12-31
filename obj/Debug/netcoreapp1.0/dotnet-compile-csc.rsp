@@ -7,8 +7,8 @@
 -debug:portable
 -nostdlib
 -nologo
-"c:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"c:\_Store\Repos2\hwapp\bin\Debug\netcoreapp1.0\hwapp.dll"
+"C:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"C:\_Store\Repos2\hwapp\bin\Debug\netcoreapp1.0\hwapp.dll"
 -r:"C:\Users\Frank\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\Frank\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authorization.dll"
 -r:"C:\Users\Frank\.nuget\packages\Microsoft.AspNetCore.Cors\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Cors.dll"
@@ -157,6 +157,6 @@
 -r:"C:\Users\Frank\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\Frank\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\Frank\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
--resource:"c:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\hwappdotnet-compile.deps.json",hwapp.deps.json
-"c:\_Store\Repos2\hwapp\Program.cs"
-"c:\_Store\Repos2\hwapp\Controllers\HomeController.cs"
+-resource:"C:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\hwappdotnet-compile.deps.json",hwapp.deps.json
+"C:\_Store\Repos2\hwapp\Program.cs"
+"C:\_Store\Repos2\hwapp\Controllers\HomeController.cs"
