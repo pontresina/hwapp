@@ -38,13 +38,16 @@
 // MSBUILD : error MSB4025: The project file could not be loaded. Data at the root level is invalid. Line 1, position 1.
 // https://github.com/aspnet/JavaScriptServices/issues/495
 
+// Serving static files
+// https://jonhilton.net/2016/08/25/how-to-serve-static-files-for-your-single-page-application-from-net-core/
+
 using System;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Http;
+//using Microsoft.AspNetCore.Http;
 
 namespace ConsoleApplication
 {
@@ -103,6 +106,8 @@ namespace ConsoleApplication
                 //app.UseExceptionHandler("/Home/Error");
             }
 
+            app.UseStaticFiles();
+
             //app.UseMvc();
             app.UseMvc(routes =>
                         {
@@ -118,6 +123,7 @@ namespace ConsoleApplication
             //});
 
             // Handler of last Resort
+            /*
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync(
@@ -125,7 +131,7 @@ namespace ConsoleApplication
                     DateTime.Now.ToString("hh:mm:ss tt"));
 
             });
-
+            */
         }
     }
 

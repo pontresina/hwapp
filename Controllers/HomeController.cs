@@ -23,6 +23,10 @@ namespace ConsoleApplication.Controllers
 
             return View();
         }
+        public ActionResult Login()
+        {
+            return View();
+        }
 
         public ActionResult Error()
         {
