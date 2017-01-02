@@ -3,7 +3,7 @@
 <head>
     <!--<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
-    <title>@ViewData["Title"] - WebApplication4 xxxx </title>
+    <title>@ViewData["Title"] - pro33.Test</title>
 
     <link href="~/css/metro.css" rel="stylesheet">
     <link href="~/css/metro-icons.css" rel="stylesheet">
@@ -12,6 +12,7 @@
     
     <script src="~/js/jquery.js"></script>
     <script src="~/js/metro.js"></script>
+    <script src="~/js/jquery.dataTables.min.js"></script>
 
     <environment names="Development">
     </environment>
@@ -178,6 +179,18 @@
                 </ul>
             </li>
         </ul>
+
+        <div class="app-bar-element place-right">
+            <span class="dropdown-toggle"><span class="mif-cog"></span> User Name</span>
+            <div class="app-bar-drop-container padding10 place-right no-margin-top block-shadow fg-dark" style="width: 220px" data-role="dropdown" data-no-close="true">
+                <h2 class="text-light">Quick settings</h2>
+                <ul class="unstyled-list fg-dark">
+                    <li><a class="fg-white1 fg-hover-yellow" href="">Profile</a></li>
+                    <li><a class="fg-white2 fg-hover-yellow" href="">Security</a></li>
+                    <li><a class="fg-white3 fg-hover-yellow" href="">Exit</a></li>
+                </ul>
+            </div>
+        </div>        
 
         <span class="app-bar-pull"></span>
 

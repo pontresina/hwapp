@@ -41,6 +41,8 @@
 // Serving static files
 // https://jonhilton.net/2016/08/25/how-to-serve-static-files-for-your-single-page-application-from-net-core/
 
+// https://datatables.net/
+
 using System;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
