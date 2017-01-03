@@ -13,17 +13,9 @@
     <script src="~/js/jquery.js"></script>
     <script src="~/js/metro.js"></script>
     <script src="~/js/jquery.dataTables.min.js"></script>
-
-    <environment names="Development">
-    </environment>
-    <environment names="Staging,Production">
-    </environment>
 </head>
 <body class="bg-grayDark">
-    <!--<h1>Hello world!</h1>
-    <div class="countdown" data-role="countdown" data-days="2"></div>-->
-<header class="app-bar fixed-top navy" data-role="appbar">
-    <div class="container">
+<header class="app-bar fixed-top darcula" data-role="appbar">
         <a class="app-bar-element branding" href="/"><img style="height: 28px; margin-right: 10px; display: inline-block;" src="../images/wn8.png"> pro33 Test</a>
 
         <ul class="app-bar-menu small-dropdown">
@@ -55,6 +47,7 @@
                     <li class="disabled"><a href="responsive.html">Responsive</a></li>
                 </ul>
             </li>
+            <li><a href="#">Download</a></li>
             <li data-flexorderorigin="1" data-flexorder="2">
                 <a class="dropdown-toggle" href="#">Widgets</a>
                 <ul class="d-menu" data-role="dropdown" data-no-close="true">
@@ -191,12 +184,10 @@
                 </ul>
             </div>
         </div>        
-
-        <span class="app-bar-pull"></span>
-
-    <div class="app-bar-pullbutton automatic" style="display: none;"></div><div class="clearfix" style="width: 0px;"></div><nav class="app-bar-pullmenu hidden flexstyle-app-bar-menu" style="display: none;"><ul class="app-bar-pullmenubar hidden app-bar-menu"></ul></nav></div>
 </header>    
 @RenderBody()
+<div class="app-bar fixed-bottom darcula">&nbsp;pro33</div>
+<!--
 <footer style="background-color: rgb(239, 234, 227);">
     <div class="bg-steel no-tablet-portrait no-phone">
         <div class="container padding20 fg-white">
@@ -214,6 +205,7 @@
         </div>
     </div>
 </footer>
-    @RenderSection("scripts", required: false)
+-->
+@RenderSection("scripts", required: false)
 </body>
 </html>
