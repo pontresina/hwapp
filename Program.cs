@@ -6,6 +6,8 @@
 // %USERPROFILE%
 // C:\Users\[username]\.vscode\extensions
 // C:\Users\[username]\AppData\Roaming\Code\User
+// ..\hwapp\.vscode\settings.json
+// C:\Users\nnn\AppData\Roaming\Code\User\settings.json
 
 // Debugging 
 // https://code.visualstudio.com/Docs/editor/debugging
@@ -42,6 +44,11 @@
 // https://jonhilton.net/2016/08/25/how-to-serve-static-files-for-your-single-page-application-from-net-core/
 
 // https://datatables.net/
+
+// http://electron.atom.io/
+// http://www.typescriptlang.org/
+// Die eigene Desktop-App mit Web-Technologien erstellen: Mit Electron von GitHub kein Problem
+// http://t3n.de/news/electron-github-nodejs-chromium-656328/
 
 using System;
 using System.IO;
