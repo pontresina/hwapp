@@ -29,6 +29,7 @@
 // git config --global --get http.proxy
 
 // http://sqlitebrowser.org/
+// IndexedDB
 
 // Layout
 // https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout#viewimports
@@ -45,10 +46,46 @@
 
 // https://datatables.net/
 
+// Node.js
+// https://nodejs.org/en/
+// node -v
+// npm -v
+
+// ASP.NET -------------------------------------------------------------------------------------------------------
+// ASP.NET Core – Schreiben von Apps mit Visual Studio Code und Entity Framework
+// https://msdn.microsoft.com/de-de/magazine/mt767698.aspx
+// ASP.NET Core & Visual Studio Code
+// https://blog.5minds.de/asp-net-core-visual-studio-code/
+// ASP.NET – Schreiben von sauberem Code in ASP.NET Core mit Abhängigkeitsinjektion (Dependency Injection)
+// https://msdn.microsoft.com/de-de/magazine/mt703433.aspx
+// Introduction to ASP.NET Core
+// https://docs.microsoft.com/en-us/aspnet/core/
+// Developers’ Home, Teil 2 - ASP.NET & Visual Studio Code auf Mac & Linux
+// https://channel9.msdn.com/Series/DevelopersHome/Developers-Home-Teil-2-ASPNET--Visual-Studio-Code-auf-Mac--Linux
+// Source code for 'Pro ASP.NET Core MVC' by Adam Freeman
+// https://github.com/Apress/pro-asp.net-core-mvc
+
 // http://electron.atom.io/
+// http://ionicframework.com/
 // http://www.typescriptlang.org/
 // Die eigene Desktop-App mit Web-Technologien erstellen: Mit Electron von GitHub kein Problem
 // http://t3n.de/news/electron-github-nodejs-chromium-656328/
+// https://microsoft.github.io/monaco-editor/
+// vs code C:\Program Files (x86)\Microsoft VS Code\resources\app\out\vs\workbench\electron-browser\bootstrap\index.html
+
+// Windows 10: Ein Code, eine App – für alle Windows-Geräte
+// https://entwickler.de/online/windowsdeveloper/windows-10-ein-code-eine-app-alle-windows-geraete-193131.html
+
+// PWA
+// http://www.biz-factory.de/2016/08/04/3-gruende-warum-progressive-web-apps-die-besseren-apps-sind/
+// https://blog.oio.de/2016/06/10/ein-einblick-in-progressive-web-apps/
+// https://flights.airberlin.com/de-DE/progressive-web-app
+
+// Linux 
+// Installing Visual Studio Code on Linux (Ubuntu)
+// http://jochen.kirstaetter.name/blog/linux/install-visual-studio-code-on-linux-ubuntu.html
+// .net Core unter Linux (Raspberry Pi)
+// https://www.dotnet.xyz/tutorials/net-core-unter-linux-raspberry-pi/
 
 using System;
 using System.IO;
