@@ -1,211 +1,214 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
-    <!--<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - pro33.Test</title>
 
     <link href="~/css/metro.css" rel="stylesheet">
     <link href="~/css/metro-icons.css" rel="stylesheet">
     <link href="~/css/metro-responsive.css" rel="stylesheet">
     <link href="~/css/metro-schemes.css" rel="stylesheet">
+    <link href="~/css/jquery-ui.css" rel="stylesheet">
     
     <script src="~/js/jquery.js"></script>
     <script src="~/js/metro.js"></script>
     <script src="~/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/jquery-ui.js"></script>
 </head>
 <body class="bg-grayDark">
-<header class="app-bar fixed-top darcula" data-role="appbar">
-        <a class="app-bar-element branding" href="/"><img style="height: 28px; margin-right: 10px; display: inline-block;" src="../images/wn8.png"> pro33 Test</a>
+    <div>
+        <header class="app-bar fixed-top darcula" data-role="appbar">
+            <a class="app-bar-element branding" href="/"><img style="height: 28px; margin-right: 10px; display: inline-block;" src="../images/wn8.png"> pro33 Test</a>
 
-        <ul class="app-bar-menu small-dropdown">
-            <li data-flexorderorigin="0" data-flexorder="1">
-                <a class="dropdown-toggle" href="#">Basis</a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li class="disabled"><a href="overview.html">Overview</a></li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="dropdown-toggle" href="">Grid system</a>
-                        <ul class="d-menu" data-role="dropdown">
-                            <li><a href="grid.html">Simple grid</a></li>
-                            <li><a href="flexgrid.html">Flex grid</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="../Home/About">About</a></li>
-                    <li><a href="tables.html">Tables</a></li>
-                    <li><a asp-area="" asp-controller="home" asp-action="contact">Contact</a></li>
-                    <li><a asp-area="" asp-controller="home" asp-action="login">Login</a></li>
-                    <li><a href="inputs.html">Forms &amp; Inputs</a></li>
-                    <li><a href="buttons.html">Buttons</a></li>
-                    <li><a href="images.html">Images</a></li>
-                    <li><a href="font.html">Metro Icon Font</a></li>
-                    <li class="divider"></li>
-                    <li><a href="colors.html">Colors</a></li>
-                    <li><a href="helpers.html">Helpers classes</a></li>
-                    <li class="divider"></li>
-                    <li><a href="rtl.html">RTL Support</a></li>
-                    <li class="disabled"><a href="responsive.html">Responsive</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Download</a></li>
-            <li data-flexorderorigin="1" data-flexorder="2">
-                <a class="dropdown-toggle" href="#">Widgets</a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li>
-                        <a class="dropdown-toggle" href="#">Menus</a>
-                        <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                            <li><a href="appbar.html">Application bar</a></li>
-                            <li><a href="menu.html">Menus</a></li>
-                            <li><a href="fluent-menu.html">Fluent menu</a></li>
-                            <li><a href="sidebar.html">Sidebar</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Controls</a>
-                        <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                            <li><a href="accordion.html">Accordion</a></li>
-                            <li><a href="button-groups.html">Button groups</a></li>
-                            <li><a href="keypad.html">Keypad</a></li>
-                            <li><a href="tabcontrol.html">Tab Control</a></li>
-                            <li><a href="treeview.html">TreeView</a></li>
-                            <li><a href="listview.html">ListView</a></li>
-                            <li><a href="sliders.html">Slider</a></li>
-                            <li><a href="stepper.html">Stepper</a></li>
-                            <li><a href="wizard.html">Wizard</a></li>
-                            <li><a href="wizard2.html">Wizard2</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Visualization</a>
-                        <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                            <li><a href="tiles.html">Tiles</a></li>
-                            <li><a href="carousel.html">Carousel</a></li>
-                            <li class="no-display"><a href="windows.html">Windows</a></li>
-                            <li><a href="popovers.html">Popovers</a></li>
-                            <li><a href="progressbar.html">Progress Bar</a></li>
-                            <li><a href="panels.html">Panels</a></li>
-                            <li><a href="rating.html">Rating</a></li>
-                            <li><a href="preloaders.html">Preloaders</a></li>
-                            <li><a href="hints.html">Hints</a></li>
-                            <li><a href="streamer.html">Streamer</a></li>
-                            <li><a href="presenter.html">Presenter</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Information</a>
-                        <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                            <li><a href="notify.html">Notify system</a></li>
-                            <li><a href="dialog.html">Dialogs</a></li>
-                            <li><a href="windows.html">Window</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Date &amp; Time</a>
-                        <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                            <li><a href="calendar.html">Calendar</a></li>
-                            <li><a href="datepicker.html">Datepicker</a></li>
-                            <li><a href="countdown.html">Countdown</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Media</a>
-                        <ul class="d-menu" data-role="dropdown">
-                            <li><a href="video-player.html">Video player</a></li>
-                            <li><a href="audio-player.html">Audio player</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Tools</a>
-                        <ul class="d-menu" data-role="dropdown">
-                            <li><a href="validator.html">Form Validator</a></li>
-                            <li><a href="draggable.html">Draggable</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="charms.html">Charms</a></li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Events &amp; Hotkeys</a>
-                        <ul class="d-menu" data-role="dropdown">
-                            <li><a href="events.html">Event binding</a></li>
-                            <li><a href="hotkeys.html">Hotkey binding</a></li>
-                        </ul>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Third-party</a>
-                        <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                            <li><a href="select2.html">Select2</a></li>
-                            <li><a href="datatables.html">DataTables</a></li>
-                        </ul>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="dropdown-toggle" href="#">Utils</a>
-                        <ul class="d-menu" data-role="dropdown">
-                            <li class="divider"></li>
-                            <li><a href="easing.html">Easing functions</a></li>
-                            <li><a href="requirejs.html">RequireJS</a></li>
-                            <li class="disabled"><a href="precode.html">PreCode</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
+            <ul class="app-bar-menu small-dropdown">
+                <li data-flexorderorigin="0" data-flexorder="1">
+                    <a class="dropdown-toggle" href="#">Basis</a>
+                    <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                        <li class="disabled"><a href="overview.html">Overview</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="dropdown-toggle" href="">Grid system</a>
+                            <ul class="d-menu" data-role="dropdown">
+                                <li><a href="grid.html">Simple grid</a></li>
+                                <li><a href="flexgrid.html">Flex grid</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../Home/About">About</a></li>
+                        <li><a href="tables.html">Tables</a></li>
+                        <li><a asp-area="" asp-controller="home" asp-action="contact">Contact</a></li>
+                        <li><a asp-area="" asp-controller="home" asp-action="login">Login</a></li>
+                        <li><a href="inputs.html">Forms &amp; Inputs</a></li>
+                        <li><a href="buttons.html">Buttons</a></li>
+                        <li><a href="images.html">Images</a></li>
+                        <li><a href="font.html">Metro Icon Font</a></li>
+                        <li class="divider"></li>
+                        <li><a href="colors.html">Colors</a></li>
+                        <li><a href="helpers.html">Helpers classes</a></li>
+                        <li class="divider"></li>
+                        <li><a href="rtl.html">RTL Support</a></li>
+                        <li class="disabled"><a href="responsive.html">Responsive</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Download</a></li>
+                <li data-flexorderorigin="1" data-flexorder="2">
+                    <a class="dropdown-toggle" href="#">Widgets</a>
+                    <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                        <li>
+                            <a class="dropdown-toggle" href="#">Menus</a>
+                            <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                                <li><a href="appbar.html">Application bar</a></li>
+                                <li><a href="menu.html">Menus</a></li>
+                                <li><a href="fluent-menu.html">Fluent menu</a></li>
+                                <li><a href="sidebar.html">Sidebar</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">Controls</a>
+                            <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                                <li><a href="accordion.html">Accordion</a></li>
+                                <li><a href="button-groups.html">Button groups</a></li>
+                                <li><a href="keypad.html">Keypad</a></li>
+                                <li><a href="tabcontrol.html">Tab Control</a></li>
+                                <li><a href="treeview.html">TreeView</a></li>
+                                <li><a href="listview.html">ListView</a></li>
+                                <li><a href="sliders.html">Slider</a></li>
+                                <li><a href="stepper.html">Stepper</a></li>
+                                <li><a href="wizard.html">Wizard</a></li>
+                                <li><a href="wizard2.html">Wizard2</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">Visualization</a>
+                            <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                                <li><a href="tiles.html">Tiles</a></li>
+                                <li><a href="carousel.html">Carousel</a></li>
+                                <li class="no-display"><a href="windows.html">Windows</a></li>
+                                <li><a href="popovers.html">Popovers</a></li>
+                                <li><a href="progressbar.html">Progress Bar</a></li>
+                                <li><a href="panels.html">Panels</a></li>
+                                <li><a href="rating.html">Rating</a></li>
+                                <li><a href="preloaders.html">Preloaders</a></li>
+                                <li><a href="hints.html">Hints</a></li>
+                                <li><a href="streamer.html">Streamer</a></li>
+                                <li><a href="presenter.html">Presenter</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">Information</a>
+                            <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                                <li><a href="notify.html">Notify system</a></li>
+                                <li><a href="dialog.html">Dialogs</a></li>
+                                <li><a href="windows.html">Window</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">Date &amp; Time</a>
+                            <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                                <li><a href="calendar.html">Calendar</a></li>
+                                <li><a href="datepicker.html">Datepicker</a></li>
+                                <li><a href="countdown.html">Countdown</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">Media</a>
+                            <ul class="d-menu" data-role="dropdown">
+                                <li><a href="video-player.html">Video player</a></li>
+                                <li><a href="audio-player.html">Audio player</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">Tools</a>
+                            <ul class="d-menu" data-role="dropdown">
+                                <li><a href="validator.html">Form Validator</a></li>
+                                <li><a href="draggable.html">Draggable</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="charms.html">Charms</a></li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">Events &amp; Hotkeys</a>
+                            <ul class="d-menu" data-role="dropdown">
+                                <li><a href="events.html">Event binding</a></li>
+                                <li><a href="hotkeys.html">Hotkey binding</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">Third-party</a>
+                            <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                                <li><a href="select2.html">Select2</a></li>
+                                <li><a href="datatables.html">DataTables</a></li>
+                            </ul>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="dropdown-toggle" href="#">Utils</a>
+                            <ul class="d-menu" data-role="dropdown">
+                                <li class="divider"></li>
+                                <li><a href="easing.html">Easing functions</a></li>
+                                <li><a href="requirejs.html">RequireJS</a></li>
+                                <li class="disabled"><a href="precode.html">PreCode</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
 
-            <li data-flexorderorigin="2" data-flexorder="3">
-                <a class="dropdown-toggle" href="#">Templates</a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li><a href="templates/start-screen.html">Start screen</a></li>
-                    <li><a href="templates/news-portal.html">News Portal</a></li>
-                    <li><a href="templates/login.html">Login form</a></li>
-                    <li><a href="templates/admin-sidebar-appbar.html">Admin with Sidebar</a></li>
-                </ul>
-            </li>
+                <li data-flexorderorigin="2" data-flexorder="3">
+                    <a class="dropdown-toggle" href="#">Templates</a>
+                    <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                        <li><a href="templates/start-screen.html">Start screen</a></li>
+                        <li><a href="templates/news-portal.html">News Portal</a></li>
+                        <li><a href="templates/login.html">Login form</a></li>
+                        <li><a href="templates/admin-sidebar-appbar.html">Admin with Sidebar</a></li>
+                    </ul>
+                </li>
 
-            <li data-flexorderorigin="3" data-flexorder="4">
-                <a class="dropdown-toggle" href="#">Community</a>
-                <ul class="d-menu" data-role="dropdown" data-no-close="true">
-                    <li><a href="http://forum.metroui.org.ua">Forum</a></li>
-                    <li><a href="https://github.com/olton/Metro-UI-CSS">Github</a></li>
-                    <li><a href="https://gitter.im/Metro-UI-CSS/Lobby">Community Chat</a></li>
-                    <li class="divider"></li>
-                    <li><a href="license.html">License</a></li>
-                </ul>
-            </li>
-        </ul>
+                <li data-flexorderorigin="3" data-flexorder="4">
+                    <a class="dropdown-toggle" href="#">Community</a>
+                    <ul class="d-menu" data-role="dropdown" data-no-close="true">
+                        <li><a href="http://forum.metroui.org.ua">Forum</a></li>
+                        <li><a href="https://github.com/olton/Metro-UI-CSS">Github</a></li>
+                        <li><a href="https://gitter.im/Metro-UI-CSS/Lobby">Community Chat</a></li>
+                        <li class="divider"></li>
+                        <li><a href="license.html">License</a></li>
+                    </ul>
+                </li>
+            </ul>
 
-        <div class="app-bar-element place-right">
-            <span class="dropdown-toggle"><span class="mif-cog"></span> User Name</span>
-            <div class="app-bar-drop-container padding10 place-right no-margin-top block-shadow fg-dark" style="width: 220px" data-role="dropdown" data-no-close="true">
-                <h2 class="text-light">Quick settings</h2>
-                <ul class="unstyled-list fg-dark">
-                    <li><a class="fg-white1 fg-hover-yellow" href="">Profile</a></li>
-                    <li><a class="fg-white2 fg-hover-yellow" href="">Security</a></li>
-                    <li><a class="fg-white3 fg-hover-yellow" href="">Exit</a></li>
-                </ul>
-            </div>
-        </div>        
-</header>    
-@RenderBody()
-<div class="app-bar fixed-bottom darcula">&nbsp;pro33</div>
-<!--
-<footer style="background-color: rgb(239, 234, 227);">
-    <div class="bg-steel no-tablet-portrait no-phone">
-        <div class="container padding20 fg-white">
-            <div class="carousel bg-transparent" style="width: 100%; height: 200px;" data-role="carousel" data-height="200" data-effect="fade" data-markers="false" data-controls="false">
-
-                <div class="slide fg-white">
-                    <div class="place-left" style="margin-right: 20px;">
-                        <img style="height: 200px;" src="images/icon_PhpStorm.svg">
-                    </div>
-                    <h1>Thanks to JetBrains</h1>
-                    <p>This Project was created in the best IDE - PhpStorm. Thanks to the company JetBrains for supporting the project in the form of a license for a great product PhpStorm.</p>
-                    <a class="button success" href="http://www.jetbrains.com/phpstorm/">Get PhpStorm now!</a>
+            <div class="app-bar-element place-right">
+                <span class="dropdown-toggle"><span class="mif-cog"></span> User Name</span>
+                <div class="app-bar-drop-container padding10 place-right no-margin-top block-shadow fg-dark" style="width: 220px" data-role="dropdown" data-no-close="true">
+                    <h2 class="text-light">Quick settings</h2>
+                    <ul class="unstyled-list fg-dark">
+                        <li><a class="fg-white1 fg-hover-yellow" href="">Profile</a></li>
+                        <li><a class="fg-white2 fg-hover-yellow" href="">Security</a></li>
+                        <li><a class="fg-white3 fg-hover-yellow" href="">Exit</a></li>
+                    </ul>
                 </div>
+            </div>        
+        </header>
+    </div>
+    <div class="page-content">
+        <div class="flex-grid no-responsive-future" style="padding-top: 60px; height: 100%;">
+            <div class="row" style="height: 100%">
+                @RenderBody()
             </div>
         </div>
     </div>
-</footer>
--->
-@RenderSection("scripts", required: false)
+    <div>
+        <footer>
+        <div class="app-bar fixed-bottom darcula">&nbsp;pro33</div>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+    <script>
+        $( function() {
+            //alert($( "cell-sidebar" ));
+            $( ".sidebar2" ).resizable();
+            //$('.sidebar2').resizable().parent().draggable(); 
+        } );
+    </script>
 </body>
 </html>

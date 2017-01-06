@@ -48,6 +48,10 @@
 
 // Node.js
 // https://nodejs.org/en/
+
+// jquery
+// http://jquery.com/
+
 // node -v
 // npm -v
 
@@ -86,6 +90,12 @@
 // http://jochen.kirstaetter.name/blog/linux/install-visual-studio-code-on-linux-ubuntu.html
 // .net Core unter Linux (Raspberry Pi)
 // https://www.dotnet.xyz/tutorials/net-core-unter-linux-raspberry-pi/
+
+// Variable divs
+// http://jsfiddle.net/A8zLY/5/
+
+// Wie man eine HTML5 Webseite aufbaut – Teil 1
+// http://www.lingulo.com/de/tutorials-de/css-tutorials/how-to-build-a-html5-website-from-scratch
 
 using System;
 using System.IO;

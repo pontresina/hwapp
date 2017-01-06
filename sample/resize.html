@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Resizable - Default functionality</title>
+  <link rel="stylesheet" type="text/css" href="jquery-ui.css">
+  <style>
+  #resizable { width: 250px; height: 150px; padding: 0.5em; color:white; background-color:black; border-color:red; border:4px; border-style:solid;}
+  #resizable h3 { text-align: center; margin: 0; }
+  </style>
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+
+</head>
+<body>
+ <!--  class="ui-widget-content" -->
+<div id="resizable">
+  <h3 class="ui-widget-header">Resizable</h3>
+</div>
+
+
+<script>
+  $(document).ready(function(){
+    $( function() {
+      // http://aleembawany.com/2009/01/25/jquery-resizable-draggable-bug-workaround/
+      //alert($("resizable").width);
+      $('#resizable').resizable().parent().draggable(); 
+      //$('#resizable').resizable().parent('.ui-wrapper').draggable();
+      //$( "#resizable" ).resizable();
+    } );
+  } );
+</script>
+</body>
+</html>

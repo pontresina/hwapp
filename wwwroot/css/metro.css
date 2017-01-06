@@ -9634,7 +9634,8 @@ input[type="submit"].link:active {
   width: auto;
   float: left;
   border-collapse: separate;
-  border: 1px #eeeeee solid;
+  /*fwa*/
+  /*border: 1px #eeeeee solid;*/
   width: 100%;
 }
 .sidebar2 li:hover > .dropdown-toggle:before {
