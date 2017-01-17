@@ -1,6 +1,6 @@
 ﻿// 23.12.2016 fwa created
 // 27.12.2016 fwa Test git clone
-// 14.01.2017 fwa git sync
+// 17.01.2017 fwa
 // https://weblog.west-wind.com/posts/2016/Jun/29/First-Steps-Exploring-NET-Core-and-ASPNET-Core#Wherearewe?
 
 // vs code
@@ -97,6 +97,18 @@
 
 // Wie man eine HTML5 Webseite aufbaut – Teil 1
 // http://www.lingulo.com/de/tutorials-de/css-tutorials/how-to-build-a-html5-website-from-scratch
+
+// Webentwicklung ohne JavaScript
+// Bootstrap components using Bootleg.css
+// http://labs.thecssninja.com/bootleg/index.html#
+// 
+// Bootstrap (Framework)
+// https://de.wikipedia.org/wiki/Bootstrap_(Framework)
+// 
+// Bootstrap
+// http://holdirbootstrap.de/
+
+
 
 using System;
 using System.IO;
