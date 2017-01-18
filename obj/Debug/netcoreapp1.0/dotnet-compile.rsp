@@ -166,3 +166,4 @@
 --resource:"f:\_Store\Repos2\hwapp\obj\Debug\netcoreapp1.0\hwappdotnet-compile.deps.json",hwapp.deps.json
 f:\_Store\Repos2\hwapp\Program.cs
 f:\_Store\Repos2\hwapp\Controllers\HomeController.cs
+f:\_Store\Repos2\hwapp\Controllers\HomeXController.cs

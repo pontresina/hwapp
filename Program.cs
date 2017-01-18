@@ -182,7 +182,7 @@ namespace ConsoleApplication
                         {
                             routes.MapRoute(
                                 name: "default",
-                                template: "{controller=Home}/{action=Index}/{id?}");
+                                template: "{controller=HomeX}/{action=Index}/{id?}");
                         });
             //app.Use(async (context, next) =>
             //{
