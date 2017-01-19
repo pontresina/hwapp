@@ -162,3 +162,5 @@
 "f:\_Store\Repos2\hwapp\Program.cs"
 "f:\_Store\Repos2\hwapp\Controllers\HomeController.cs"
 "f:\_Store\Repos2\hwapp\Controllers\HomeXController.cs"
+"f:\_Store\Repos2\hwapp\Controllers\SBAdminController.cs"
+"f:\_Store\Repos2\hwapp\Controllers\SimpleSidebarController.cs"

@@ -116,6 +116,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+// using Microsoft.Extensions.Logging;
 //using Microsoft.AspNetCore.Http;
 
 namespace ConsoleApplication
@@ -148,6 +149,7 @@ namespace ConsoleApplication
                     .UseContentRoot(Directory.GetCurrentDirectory())
                     .UseKestrel()
                     //.UseIISIntegration()
+                    //.UseSetting("detailedErrors","true")
                     .UseStartup<Startup>()
                     .UseUrls("http://localhost:5001")
                     .Build();
@@ -162,10 +164,17 @@ namespace ConsoleApplication
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            //services.AddMvcCore();
+            //services.AddLogging();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, Microsoft.Extensions.Logging.ILoggerFactory loggerFactory)
         {
+            //public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+            //loggerFactory.AddConsole();
+
+            env.EnvironmentName = EnvironmentName.Production;
+
             if (env.IsDevelopment())
             {
                 //app.UseDeveloperExceptionPage();
@@ -175,14 +184,15 @@ namespace ConsoleApplication
                 //app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles();
+            //app.UseMvcWithDefaultRoute();
 
+            app.UseStaticFiles();
             //app.UseMvc();
             app.UseMvc(routes =>
                         {
                             routes.MapRoute(
                                 name: "default",
-                                template: "{controller=HomeX}/{action=Index}/{id?}");
+                                template: "{controller=simplesidebar}/{action=Index}/{id?}");
                         });
             //app.Use(async (context, next) =>
             //{
@@ -191,6 +201,17 @@ namespace ConsoleApplication
             //    await context.Response.WriteAsync("Post Processing");
             //});
 
+            /*
+            app.Use(async (context, next) =>
+                {
+                    await next();
+                    if (context.Response.StatusCode == 500)
+                    {
+                        context.Request.Path = "~/Home"; 
+                        await next();
+                    }
+                });
+            */
             // Handler of last Resort
             /*
             app.Run(async (context) =>
@@ -201,6 +222,15 @@ namespace ConsoleApplication
 
             });
             */
+
+            /*app.Use(async (context, next) =>
+            {
+                //context.HttpContext.Response.ContentType = "text/plain";
+                await context.Response.WriteAsync(
+                    "Status code page, status code: " + 
+                    context.Response.StatusCode);
+            });*/
+
         }
     }
 
