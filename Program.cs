@@ -1,6 +1,6 @@
 ﻿// 23.12.2016 fwa created
 // 27.12.2016 fwa Test git clone
-// 17.01.2017 fwa
+// 20.01.2017 fwa
 // https://weblog.west-wind.com/posts/2016/Jun/29/First-Steps-Exploring-NET-Core-and-ASPNET-Core#Wherearewe?
 
 // vs code
@@ -107,8 +107,15 @@
 // 
 // Bootstrap
 // http://holdirbootstrap.de/
-
-
+// http://www.w3schools.com/bootstrap/default.asp
+// Timeline http://codepen.io/bsngr/pen/Ifvbi 
+// http://www.designbootstrap.com/livedemos/2015/03/02/side-menu/index.html#
+// https://www.tutorialspoint.com/bootstrap/bootstrap_tables.htm
+// https://getbootstrap.com/examples/dashboard/#
+// Sidebar https://medium.com/wdstack/bootstrap-sidebar-examples-e363021395ff#.xxmblsoy7
+// http://www.bootply.com/dragan/3AZB0lGFyt
+// toggle http://seegatesite.com/create-simple-cool-sidebar-menu-with-bootstrap-3/
+// http://bootsnipp.com/snippets/4zmQ
 
 using System;
 using System.IO;
@@ -192,7 +199,7 @@ namespace ConsoleApplication
                         {
                             routes.MapRoute(
                                 name: "default",
-                                template: "{controller=simplesidebar}/{action=Index}/{id?}");
+                                template: "{controller=SBAdmin}/{action=Index}/{id?}");
                         });
             //app.Use(async (context, next) =>
             //{
