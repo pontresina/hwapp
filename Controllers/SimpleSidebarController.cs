@@ -8,6 +8,5 @@ namespace ConsoleApplication.Controllers
         {
             return View();
         }
-       
     }
 }

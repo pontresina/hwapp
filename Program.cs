@@ -125,7 +125,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 // using Microsoft.Extensions.Logging;
-//using Microsoft.AspNetCore.Http;
+// using Microsoft.AspNetCore.Http;
 
 namespace ConsoleApplication
 {
@@ -146,6 +146,10 @@ namespace ConsoleApplication
                 }
             }
 
+            // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
+            // https://github.com/aspnet/KestrelHttpServer/blob/dev/samples/SampleApp/Startup.cs
+            // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/hosting
+
             if(IsConsole == false){
                     /*.UseServer("Microsoft.AspNetCore.Server.Kestrel")
                     .UseApplicationBasePath(Directory.GetCurrentDirectory())
@@ -154,15 +158,22 @@ namespace ConsoleApplication
                     .UseUrls("http://localhost:5050")*/
 
                 var host = new WebHostBuilder()
+                    .UseEnvironment("Development")
+                    .CaptureStartupErrors(true)
+                    .UseSetting("detailedErrors","true")
                     .UseContentRoot(Directory.GetCurrentDirectory())
                     .UseKestrel()
                     //.UseIISIntegration()
-                    //.UseSetting("detailedErrors","true")
                     .UseStartup<Startup>()
                     .UseUrls("http://localhost:5001")
                     .Build();
+                
+                Console.WriteLine("host.run");
 
-                host.Run();
+                host.Start();
+                //host.Run();
+                Console.WriteLine("alasddada");
+                Console.ReadKey();
             }
         }
     }
@@ -200,7 +211,7 @@ namespace ConsoleApplication
                         {
                             routes.MapRoute(
                                 name: "default",
-                                template: "{controller=SBAdmin}/{action=Index}/{id?}");
+                                template: "{controller=SimpleSidebar}/{action=Index}/{id?}");
                         });
             //app.Use(async (context, next) =>
             //{
