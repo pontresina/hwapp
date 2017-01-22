@@ -118,6 +118,10 @@
 // toggle http://seegatesite.com/create-simple-cool-sidebar-menu-with-bootstrap-3/
 // http://bootsnipp.com/snippets/4zmQ
 
+// Listener or timer  Variable changed
+// https://www.daniweb.com/programming/software-development/threads/215395/detect-variable-change
+// https://social.msdn.microsoft.com/Forums/vstudio/en-US/8a7aa410-3c89-4860-a9ff-1d9733629873/is-there-a-listener-to-detect-change-in-variable?forum=csharpgeneral
+
 using System;
 using System.IO;
 using Microsoft.AspNetCore.Builder;
@@ -149,6 +153,7 @@ namespace ConsoleApplication
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
             // https://github.com/aspnet/KestrelHttpServer/blob/dev/samples/SampleApp/Startup.cs
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/hosting
+            // https://books.google.de/books?id=iEQWDQAAQBAJ&pg=PA405&lpg=PA405&dq=internal.webhost%C2%A0core&source=bl&ots=tJ_N8iI6gr&sig=nsiqrcBMlRymCptvxi6Ghambkc4&hl=de&sa=X&ved=0ahUKEwib7arp1dbRAhVEJ5oKHRfoBHwQ6AEIKTAB#v=onepage&q=internal.webhost%C2%A0core&f=false
 
             if(IsConsole == false){
                     /*.UseServer("Microsoft.AspNetCore.Server.Kestrel")
@@ -168,11 +173,11 @@ namespace ConsoleApplication
                     .UseUrls("http://localhost:5001")
                     .Build();
                 
-                Console.WriteLine("host.run");
+                Console.WriteLine("host.start");
 
                 host.Start();
                 //host.Run();
-                Console.WriteLine("alasddada");
+
                 Console.ReadKey();
             }
         }
