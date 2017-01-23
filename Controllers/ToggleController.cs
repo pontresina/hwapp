@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ConsoleApplication.Controllers
 {
-    public class Toggle2Controller : Controller
+    public class ToggleController : Controller
     {
         public ActionResult Index()
         {

@@ -153,7 +153,9 @@ namespace ConsoleApplication
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel
             // https://github.com/aspnet/KestrelHttpServer/blob/dev/samples/SampleApp/Startup.cs
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/hosting
+            // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/app-state
             // https://books.google.de/books?id=iEQWDQAAQBAJ&pg=PA405&lpg=PA405&dq=internal.webhost%C2%A0core&source=bl&ots=tJ_N8iI6gr&sig=nsiqrcBMlRymCptvxi6Ghambkc4&hl=de&sa=X&ved=0ahUKEwib7arp1dbRAhVEJ5oKHRfoBHwQ6AEIKTAB#v=onepage&q=internal.webhost%C2%A0core&f=false
+            // http://www.csharpstar.com/asp-net-core-as-a-console-application/
 
             if(IsConsole == false){
                     /*.UseServer("Microsoft.AspNetCore.Server.Kestrel")
@@ -178,18 +180,83 @@ namespace ConsoleApplication
                 host.Start();
                 //host.Run();
 
-                Console.ReadKey();
+                using (host)
+                {
+                    // http://stackoverflow.com/questions/5891538/listen-for-key-press-in-net-console-app
+                    // https://blog.mariusschulz.com/2016/08/06/simulating-latency-in-asp-net-core
+                    // .NET Core API Reference
+                    // https://docs.microsoft.com/en-us/dotnet/core/api/
+                    // Websocket
+                    // http://zbrad.github.io/tools/wscore/
+                    // ASP.NET Core - Teil 1: die Basics
+                    // https://schwabencode.com/blog/asp-net/2016/09/05/asp-net-core-die-basics/
+                    // c# listener change variable
+                    // http://stackoverflow.com/questions/24203952/trigger-an-event-when-a-variable-value-changes
+
+                    /*System.Threading.ThreadStart threadStart = delegate { SomeMethod(variable); };
+
+                    System.Threading.Thread thread = new System.Threading.Thread(threadStart);
+                    thread.IsBackground = true;
+                    thread.Start();*/
+
+                    Console.WriteLine("Press ESC to stop");
+
+                    while (!(Console.KeyAvailable && Console.ReadKey(true).Key == ConsoleKey.Escape))
+                    {
+                        // do something
+                        Console.WriteLine(DateTime.Now);
+                    }   
+
+                    /*
+                    Console.WriteLine("... Press escape, a, then control X");
+                    // Call ReadKey method and store result in local variable.
+                    // ... Then test the result for escape.
+                    ConsoleKeyInfo info = Console.ReadKey();
+                    if (info.Key == ConsoleKey.Escape)
+                    {
+                        Console.WriteLine("You pressed escape!");
+                    }
+                    // Call ReadKey again and test for the letter a.
+                    info = Console.ReadKey();
+                    if (info.KeyChar == 'a')
+                    {
+                        Console.WriteLine("You pressed a");
+                    }
+                    // Call ReadKey again and test for control-X.
+                    // ... This implements a shortcut sequence.
+                    info = Console.ReadKey();
+                    if (info.Key == ConsoleKey.X &&
+                        info.Modifiers == ConsoleModifiers.Control)
+                    {
+                        Console.WriteLine("You pressed control X");
+                    }      
+                    */          
+                }
             }
         }
     }
 
     public class Startup
     {
+        public string applicationPath = "";
+        public string contentRootPath = "";
+        
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
             //services.AddMvcCore();
             //services.AddLogging();
+
+        // Adds a default in-memory implementation of IDistributedCache.
+        /*services.AddDistributedMemoryCache();
+
+        services.AddSession(options =>
+        {
+            // Set a short timeout for easy testing.
+            options.IdleTimeout = TimeSpan.FromSeconds(10);
+            options.CookieHttpOnly = true;
+        });*/
+            
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, Microsoft.Extensions.Logging.ILoggerFactory loggerFactory)
@@ -197,11 +264,13 @@ namespace ConsoleApplication
             //public void Configure(IApplicationBuilder app, IHostingEnvironment env)
             //loggerFactory.AddConsole();
 
-            env.EnvironmentName = EnvironmentName.Production;
+            env.EnvironmentName = EnvironmentName.Development;
+            applicationPath = env.WebRootPath;
+            contentRootPath = env.ContentRootPath;
 
             if (env.IsDevelopment())
             {
-                //app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();
             }
             else
             {
@@ -209,15 +278,17 @@ namespace ConsoleApplication
             }
 
             //app.UseMvcWithDefaultRoute();
-
             app.UseStaticFiles();
             //app.UseMvc();
             app.UseMvc(routes =>
                         {
                             routes.MapRoute(
                                 name: "default",
-                                template: "{controller=SimpleSidebar}/{action=Index}/{id?}");
+                                template: "{controller=Toggle}/{action=Index}/{id?}");
                         });
+
+            //app.UseSession();
+                        
             //app.Use(async (context, next) =>
             //{
             //    await context.Response.WriteAsync("Pre Processing");
@@ -256,6 +327,16 @@ namespace ConsoleApplication
             });*/
 
         }
+
+        /*public static void StartBackgroundThread(System.Threading.ThreadStart threadStart)
+        {
+          if (threadStart != null)
+          {
+            System.Threading.ThreadStart thread = new System.Threading.ThreadStart(threadStart);
+            //thread.IsBackground = true;
+            //thread.Start();
+          }
+        }*/
     }
 
     public class HelloWorldController : Controller
